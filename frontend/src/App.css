@@ -8,13 +8,14 @@
   }
   
   /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  input::-webkit-outer-spin-button,  
+  input::-webkit-inner-spin-button {   
+    -webkit-appearance: none;           
     margin: 0;
   }
-  
-  /* Firefox */
+    /* isme yese isliye use kiye hai ki jo hmari productDetails me number of products increase ya decrease krni thi oo ek structure way me ho jaaye saare browser ke liye */
+  /* isse yaad kr lena hai .. ua copy paste kr dena hai ... */
+    /* Firefox */
   input[type="number"] {
     -moz-appearance: textfield;
   }

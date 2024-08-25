@@ -1,12 +1,17 @@
+
 const express = require("express");
 const app = express();
+
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
-// config
+
 dotenv.config({path:"./config/config.env"})
+// config
+
 
 // Route Imports
 const product = require("./routes/productRoute");
@@ -18,7 +23,7 @@ const errorMiddleware = require("./middleware/error");
 
 // app.use(cors());
 app.use(cors({
-    origin:["http://localhost:3000","https://fullstack-ecommerce-allfea.vercel.app"],
+    origin:["http://localhost:3000","https://fullstack-ecommerce-mern.vercel.app"],
     methods:['POST','GET','HEAD','PUT','DELETE'],
     credentials: true
 }))

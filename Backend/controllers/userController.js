@@ -73,7 +73,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     }
     const resetToken = user.getResetPasswordToken();
     await user.save({ validateBeforeSave: false });
-    const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
+    const resetPasswordUrl = `https://fullstack-ecommerce-mern.vercel.app/password/reset/${resetToken}`;
     const message = `Your password reset token is: \n\n ${resetPasswordUrl} \n\n If you have not requested this email, please ignore it.`;
 
     await sendEmail({

@@ -12,16 +12,16 @@ const Home = () => {
 
   const alert = useAlert();
   const dispatch = useDispatch();
-  const { loading, error, products } = useSelector(
+  const { loading, error, products } = useSelector(   // the data which is in state, if we want to get that data then we use useSelector..
     (state) => state.products
   );
 
   useEffect(() => {
     if(error){
       alert.error(error);
-      dispatch(clearErrors());
+      dispatch(clearErrors());  
     }
-    dispatch(getProduct());
+    dispatch(getProduct()); // yaha dispatch ka use isliye hua hai ki jab bhi hmm Home.js ka route use kare tab tab dispatch ke andr jo action hai getProducts() usse call kr de ya trigger kr de ..
   }, [dispatch,error,alert]);
 
   return (

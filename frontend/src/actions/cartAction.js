@@ -16,7 +16,7 @@ export const addItemsToCart = (id, quantity) => async (dispatch,getState) => {
                 quantity,
             }
         })
-        localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));    
+        localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));  // ye hai ki jb page reload ho tb items removes na ho oo Loacal storage me save rahe ..  
 }
 
 // REMOVE FROM CART

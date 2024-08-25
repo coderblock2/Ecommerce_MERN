@@ -7,7 +7,7 @@ import {
   REGISTER_USER_SUCCESS,
   REGISTER_USER_FAIL,
   LOAD_USER_REQUEST,
-  LOAD_USER_SUCCESS,
+  LOAD_USER_SUCCESS,  // jb bhi hmm login rahe pehle se to yadi page ko reload kiya jaaye to oo dubara se login ho jaaye oo user ..and uss user ki sara data dubara se aa jaaye ..
   LOAD_USER_FAIL,
   LOGOUT_SUCCESS,
   LOGOUT_FAIL,

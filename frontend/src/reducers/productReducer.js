@@ -44,17 +44,17 @@ import {
 } from "../constants/productConstants";
 
 export const productsReducer = (state = { products: [] }, action) => {
-    switch (action.type) {
+    switch (action.type) {        // action types like  ALL_PRODUCT_FAIL, ALL_PRODUCT_REQUEST,  NEW_REVIEW_REQUEST, etc..  this will fetch as a action..
       case ALL_PRODUCT_REQUEST:
       case ADMIN_PRODUCT_REQUEST:
         return {
           loading: true,
-          products: [],
+          products: [],  //in request,  we have sent empty array
         };
       case ALL_PRODUCT_SUCCESS:
         return {
           loading: false,
-          products: action.payload.products,
+          products: action.payload.products,  //// Yahan se products array ko access kiya ja raha hai.    // action.payload ek object hota hai jo Redux action ke andar data ko carry karta hai. Jab aap Redux action dispatch karte hain, aap usmein koi data bhi include kar sakte hain, aur woh data payload field ke andar chala jata hai.
           productsCount: action.payload.productsCount,
           resultPerPage: action.payload.resultPerPage,
           filteredProductsCount: action.payload.filteredProductsCount,
@@ -170,7 +170,7 @@ export const productDetailsReducer = (state = {product: {} }, action) => {
         case PRODUCT_DETAILS_REQUEST:
             return{
                 loading:true,
-                ...state,
+                ...state,    //State Action ki hoti hai ... ohi wala state ki baat yha pe ho rhi hai ..
             }
         case PRODUCT_DETAILS_SUCCESS:
             return{

@@ -62,7 +62,7 @@ const LoginSignUp = () => {
           const reader = new FileReader();
     
           reader.onload = () => {
-            if (reader.readyState === 2) {
+            if (reader.readyState === 2) {   // isme mainly three state hi hoti hai ... 0,1,2 -- 0 means initial, 1 means processing and 2 means done..
               setAvatarPreview(reader.result);
               setAvatar(reader.result);
             }
@@ -82,15 +82,15 @@ const LoginSignUp = () => {
             dispatch(clearErrors());
         }
 
-        if(isAuthenticated){
+        if(isAuthenticated){     // ye hai ki yadi hmm login kr jaaye to hmm ussi peage pe na reh jaaye...
             navigate(redirect);
         }
       },[dispatch, error, alert, navigate, isAuthenticated])
 
     const switchTabs = (e, tab) => {
-        if (tab === "login") {
-            switcherTab.current.classList.add("shiftToNeutral");
-            switcherTab.current.classList.remove("shiftToRight");
+        if (tab === "login") {      // switchTabs me do hai ek login and ek register to dno ko hmm tab ke through aceess krne ki kosis krenge ..
+            switcherTab.current.classList.add("shiftToNeutral");  // jaise hi hmm login wala switchTab use krenge theek waise hi uske poisiton ko ye normal kr dega .. 
+            switcherTab.current.classList.remove("shiftToRight");  // and right waale part ko remove kr dega ..
       
             registerTab.current.classList.remove("shiftToNeutralForm");
             loginTab.current.classList.remove("shiftToLeft");

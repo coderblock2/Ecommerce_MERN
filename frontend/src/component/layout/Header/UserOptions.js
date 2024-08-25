@@ -39,8 +39,8 @@ const UserOptions = ({user}) => {
   ];
 
   if(user.role === "admin"){
-    options.unshift({
-      icon: <DashboardIcon/>,
+    options.unshift({       //shift --  Removes the first element from an array and returns that removed element.
+      icon: <DashboardIcon/>,    //unshift -- Adds one or more elements to the beginning of an array and returns the new length of the array.
       name: "Dashboard",
       func: dashboard,
     });
@@ -69,14 +69,14 @@ const UserOptions = ({user}) => {
 
   return (
     <Fragment>
-    <Backdrop open={open} style={{ zIndex: "10" }}/>
+ <Backdrop open={open} style={{ zIndex: "10" }}/>       {/*  ye hota hai ki jb login wala icon true tabhi oo top pe dikhe and uske background wala back me dikhe ...  */}
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         style={{ zIndex: "11" }}
         open={open}
-        direction='down'
+        direction='down'   // hoover krne pe down me aayega sara option like dashboard, profile and etc.
         className='speedDial'
         icon={
           <img
@@ -87,7 +87,7 @@ const UserOptions = ({user}) => {
         }
       >
       {options.map((item) => (
-          <SpeedDialAction
+          <SpeedDialAction     // hoover pe ye saare show ho jaayegnge ..
              key = {item.name}
              icon={item.icon}
              tooltipTitle={item.name}

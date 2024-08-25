@@ -18,7 +18,7 @@ import ProtectedRoute from "./component/Route/ProtectedRoute";
 import UpdateProfile from './component/User/UpdateProfile';
 import UpdatePassword from './component/User/UpdatePassword';
 import ForgotPassword from './component/User/ForgotPassword';
-import ResetPassword from './component/User/ResetPassword';
+import ResetPassword from './component/User/ResetPassword';     // jo mail gaya hai uss URL ko accss krne ke liye and password change ke liye route ..
 import Cart from "./component/Cart/Cart";
 import Shipping from "./component/Cart/Shipping";
 import ConfirmOrder from "./component/Cart/ConfirmOrder";

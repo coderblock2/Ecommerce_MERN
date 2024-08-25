@@ -10,7 +10,7 @@ const Search = () => {
 
   const searchSubmitHandler = (e) => {
     e.preventDefault();
-    if (keyword.trim()) {
+    if (keyword.trim()) {   // trim() se saare spaces remove ho jaayengi...
         navigate(`/products/${keyword}`);
     } else {
         navigate("/products");
